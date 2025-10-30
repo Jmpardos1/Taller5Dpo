@@ -1,0 +1,11 @@
+Cliente: Carol
+Dirección: Calle 99
+----------------
+Hamburguesa
+            12000
+Papas
+            7000
+----------------
+Precio Neto:  19000
+IVA:          3610
+Precio Total: 22610
