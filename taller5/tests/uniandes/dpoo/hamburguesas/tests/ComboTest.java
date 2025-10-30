@@ -25,16 +25,16 @@ public class ComboTest {
     }
 
     @Test
-    @DisplayName("Precio con 0% de descuento: debe ser la suma de los ítems (especificación)")
+    @DisplayName("Precio con 0% de descuento: debe ser la suma de los ítems ")
     void precioSinDescuento() {
         ArrayList<ProductoMenu> items = new ArrayList<>();
         items.add(new ProductoMenu("Hamburguesa", 12000));
         items.add(new ProductoMenu("Papas", 7000));
-        items.add(new ProductoMenu("Gaseosa", 5000)); // suma = 24000
+        items.add(new ProductoMenu("Gaseosa", 5000)); 
 
         Combo combo = new Combo("Sin desc", 0.0, items);
 
-        int esperado = (int) Math.round(24000 * (1 - 0.0)); // 24000
+        int esperado = (int) Math.round(24000 * (1 - 0.0)); 
         assertEquals(esperado, combo.getPrecio(),
                 "Con 0% de descuento el precio debe ser la suma de los ítems");
     }
@@ -45,11 +45,11 @@ public class ComboTest {
         ArrayList<ProductoMenu> items = new ArrayList<>();
         items.add(new ProductoMenu("Hamburguesa", 12000));
         items.add(new ProductoMenu("Papas", 7000));
-        items.add(new ProductoMenu("Gaseosa", 5000)); // suma = 24000
+        items.add(new ProductoMenu("Gaseosa", 5000)); 
 
         Combo combo = new Combo("10%", 0.10, items);
 
-        int esperado = (int) Math.round(24000 * (1 - 0.10)); // 21600
+        int esperado = (int) Math.round(24000 * (1 - 0.10));
         assertEquals(esperado, combo.getPrecio(),
                 "Debe aplicar (1 − descuento) a la suma de los ítems");
     }
@@ -70,7 +70,7 @@ public class ComboTest {
     }
 
     @Test
-    @DisplayName("Factura: incluye encabezado, línea de descuento y finaliza con total alineado correcto (especificación)")
+    @DisplayName("Factura: incluye encabezado, línea de descuento y finaliza con total alineado correcto")
     void facturaIncluyeNombreDescuentoYTotalCorrecto() {
         ArrayList<ProductoMenu> items = new ArrayList<>();
         items.add(new ProductoMenu("Hamburguesa", 10000));
